@@ -143,8 +143,7 @@ for epoch in range(5):
         
         cols_standardize = site_name
         standardize = [([col], StandardScaler()) for col in cols_standardize]
-        #leave = [(col, None) for col in cols_leave]
-        x_mapper = DataFrameMapper(standardize) #+ leave)
+        x_mapper = DataFrameMapper(standardize) 
 
         df_train = df_all.iloc[train_id]
         df_val = df_all.iloc[valid_id]
